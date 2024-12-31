@@ -1,4 +1,6 @@
 import 'package:electronic_rosary/src/core/style/color_background.dart';
+import 'package:electronic_rosary/src/core/style/image_app.dart';
+import 'package:electronic_rosary/src/core/style/size_app.dart';
 import 'package:electronic_rosary/src/core/style/string_app.dart';
 import 'package:electronic_rosary/src/feature/home/cubit/counter_state.dart';
 import 'package:flutter/material.dart';
@@ -7,9 +9,11 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 class CounterCubit extends Cubit<CounterState> {
   CounterCubit() : super(CounterInitial());
 
+  double count = 0;
+  String img = ImageApp.backgroundImage4;
   String name = StringApp.laAlihAlaAllah;
   Color color = ColorBackground.backLightPink;
-  double count = 0;
+  double size = SizeApp.s30;
   void plusCoubterCubit() {
     count++;
     emit(CounterAdditionalState());
@@ -20,51 +24,76 @@ class CounterCubit extends Cubit<CounterState> {
     emit(CounterResetState());
   }
 
-  changeColor1() {
+    void changeColor1() {
     color = ColorBackground.backpastel;
-    emit(CounterUpdateColorState());
+    img = ImageApp.backgroundImage1;
+    emit(CounterUpdateImageState());
   }
 
-  changeColor2() {
+  void changeColor2() {
     color = ColorBackground.backBlush;
-
-    emit(CounterUpdateColorState());
+    img = ImageApp.backgroundImage2;
+    emit(CounterUpdateImageState());
   }
 
-  changeColor3() {
+  void changeColor3() {
     color = ColorBackground.backPinkAccent;
-
-    emit(CounterUpdateColorState());
+    img = ImageApp.backgroundImage3;
+    emit(CounterUpdateImageState());
   }
 
-  changeColor4() {
+  void changeColor4() {
     color = ColorBackground.backLightPink;
-
-    emit(CounterUpdateColorState());
+    img = ImageApp.backgroundImage4;
+    emit(CounterUpdateImageState());
   }
 
-  changeName1() {
+  void changeName1() {
     name = StringApp.subhanAllah;
     emit(CounterUpdateNameState());
   }
 
-  changeName2() {
+  void changeName2() {
     name = StringApp.alhamdAilah;
     emit(CounterUpdateNameState());
   }
 
-  changeName3() {
+  void changeName3() {
     name = StringApp.laAlihAlaAllah;
     emit(CounterUpdateNameState());
   }
 
-  changeName4() {
+  void changeName4() {
     name = StringApp.allahAkbar;
     emit(CounterUpdateNameState());
   }
 
-  changeName5() {
+  void changeName5() {
     name = StringApp.lahulWalaquhAlaBiAllah;
     emit(CounterUpdateNameState());
+  }
+    void changeSize30() {
+    size = SizeApp.s30;
+    emit(CounterUpdateSizeState());
+  }
+
+  void changeSize40() {
+    size = SizeApp.s40;
+    emit(CounterUpdateSizeState());
+  }
+
+  void changeSize50() {
+    size = SizeApp.s50;
+    emit(CounterUpdateSizeState());
+  }
+
+  void changeSize60() {
+    size = SizeApp.s60;
+    emit(CounterUpdateSizeState());
+  }
+
+  void changeSize70() {
+    size = SizeApp.s70;
+    emit(CounterUpdateSizeState());
   }
 }

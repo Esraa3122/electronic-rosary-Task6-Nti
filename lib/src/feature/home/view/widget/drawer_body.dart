@@ -1,7 +1,7 @@
   import 'package:electronic_rosary/src/core/style/string_app.dart';
 import 'package:electronic_rosary/src/feature/home/cubit/counter_cubit.dart';
 import 'package:electronic_rosary/src/feature/home/view/widget/custom_widget_drawer.dart';
-import 'package:electronic_rosary/src/feature/home/view/widget/image_widget_drawer.dart';
+import 'package:electronic_rosary/src/feature/home/view/widget/image_drawer.dart';
 import 'package:flutter/material.dart';
 
 class DrawerHome extends StatelessWidget {

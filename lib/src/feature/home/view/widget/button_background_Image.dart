@@ -1,11 +1,11 @@
 import 'package:electronic_rosary/src/core/style/size_app.dart';
 import 'package:flutter/material.dart';
 
-class BackGroundColor extends StatelessWidget {
-  const BackGroundColor({super.key, required this.onTap, required this.color});
+class ButtonBackgroundImage extends StatelessWidget {
+  const ButtonBackgroundImage({super.key, required this.onTap, required this.backgroundImage,});
 
   final Function()? onTap;
-  final Color color;
+  final ImageProvider<Object>? backgroundImage;
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +13,7 @@ class BackGroundColor extends StatelessWidget {
       onTap: onTap,
       child: CircleAvatar(
         radius: SizeApp.s30,
-        backgroundColor: color,
+        backgroundImage: backgroundImage,
       ),
     );
   }

@@ -4,11 +4,11 @@ import 'package:flutter/material.dart';
 
 listener (context, state){
   return (context, state) {
-    if (state is CounterUpdateColorState) {
+    if (state is CounterUpdateImageState) {
       ScaffoldMessenger.of(context).showSnackBar(
           const SnackBar(
               backgroundColor: Colors.white,
-              content: Center(child: Text(" تم تحديث اللون بنجاح" , style: TextStyle(
+              content: Center(child: Text(" تم تحديث الخلفيه و اللون بنجاح" , style: TextStyle(
                   color: Colors.pinkAccent,fontSize: SizeApp.s17
               ),)))
       );

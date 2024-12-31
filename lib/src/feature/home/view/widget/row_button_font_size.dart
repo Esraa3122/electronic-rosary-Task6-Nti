@@ -1,11 +1,13 @@
 import 'package:electronic_rosary/src/core/style/color_background.dart';
 import 'package:electronic_rosary/src/feature/home/cubit/counter_cubit.dart';
-import 'package:electronic_rosary/src/feature/home/view/widget/background_color.dart';
+import 'package:electronic_rosary/src/feature/home/view/widget/button_size.dart';
 import 'package:flutter/material.dart';
 
-class RowBackGroundColor extends StatelessWidget {
-  const RowBackGroundColor({super.key, required this.cubit});
-   final CounterCubit cubit;
+class RowButtonFontSize extends StatelessWidget {
+  const RowButtonFontSize({super.key, required this.cubit});
+  final CounterCubit cubit;
+
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -13,29 +15,33 @@ class RowBackGroundColor extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          BackGroundColor(
+          ButtonSize(
             color: ColorBackground.backLightPink,
             onTap: (){
-              cubit.changeColor4();
-            },
+              cubit.changeSize30();
+            }, 
+            title: "30",
           ),
-          BackGroundColor(
+           ButtonSize(
             color: ColorBackground.backPinkAccent,
             onTap: (){
-              cubit.changeColor3();
-            },
+              cubit.changeSize40();
+            }, 
+            title: "40",
           ),
-          BackGroundColor(
+           ButtonSize(
             color: ColorBackground.backBlush,
             onTap: (){
-              cubit.changeColor2();
-            },
+              cubit.changeSize50();
+            }, 
+            title: "50",
           ),
-          BackGroundColor(
+           ButtonSize(
             color: ColorBackground.backpastel,
             onTap: (){
-              cubit.changeColor1();
-            },
+              cubit.changeSize60();
+            }, 
+            title: "60",
           ),
       
         ],
